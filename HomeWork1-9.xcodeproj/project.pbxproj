@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		498A310627FB01450041EFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A310527FB01450041EFEB /* AppDelegate.swift */; };
 		498A310827FB01450041EFEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A310727FB01450041EFEB /* SceneDelegate.swift */; };
-		498A310A27FB01450041EFEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A310927FB01450041EFEB /* ViewController.swift */; };
 		498A310D27FB01450041EFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498A310B27FB01450041EFEB /* Main.storyboard */; };
 		498A311027FB01450041EFEB /* HomeWork1_9.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 498A310E27FB01450041EFEB /* HomeWork1_9.xcdatamodeld */; };
 		498A311227FB01480041EFEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498A311127FB01480041EFEB /* Assets.xcassets */; };
 		498A311527FB01480041EFEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498A311327FB01480041EFEB /* LaunchScreen.storyboard */; };
+		498A311D27FB018D0041EFEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A311C27FB018D0041EFEB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		498A310227FB01450041EFEB /* HomeWork1-9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWork1-9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		498A310527FB01450041EFEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		498A310727FB01450041EFEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		498A310927FB01450041EFEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		498A310C27FB01450041EFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		498A310F27FB01450041EFEB /* HomeWork1_9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeWork1_9.xcdatamodel; sourceTree = "<group>"; };
 		498A311127FB01480041EFEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		498A311427FB01480041EFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		498A311627FB01480041EFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		498A311C27FB018D0041EFEB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 			children = (
 				498A310527FB01450041EFEB /* AppDelegate.swift */,
 				498A310727FB01450041EFEB /* SceneDelegate.swift */,
-				498A310927FB01450041EFEB /* ViewController.swift */,
 				498A310B27FB01450041EFEB /* Main.storyboard */,
+				498A311C27FB018D0041EFEB /* LoginViewController.swift */,
 				498A311127FB01480041EFEB /* Assets.xcassets */,
 				498A311327FB01480041EFEB /* LaunchScreen.storyboard */,
 				498A311627FB01480041EFEB /* Info.plist */,
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				498A310A27FB01450041EFEB /* ViewController.swift in Sources */,
+				498A311D27FB018D0041EFEB /* LoginViewController.swift in Sources */,
 				498A311027FB01450041EFEB /* HomeWork1_9.xcdatamodeld in Sources */,
 				498A310627FB01450041EFEB /* AppDelegate.swift in Sources */,
 				498A310827FB01450041EFEB /* SceneDelegate.swift in Sources */,
