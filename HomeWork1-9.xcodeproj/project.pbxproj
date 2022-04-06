@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4909C91D27FDE4550045DEB8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4909C91C27FDE4550045DEB8 /* MenuViewController.swift */; };
 		498A310627FB01450041EFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A310527FB01450041EFEB /* AppDelegate.swift */; };
 		498A310827FB01450041EFEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A310727FB01450041EFEB /* SceneDelegate.swift */; };
 		498A310D27FB01450041EFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498A310B27FB01450041EFEB /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4909C91C27FDE4550045DEB8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		498A310227FB01450041EFEB /* HomeWork1-9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWork1-9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		498A310527FB01450041EFEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		498A310727FB01450041EFEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,8 +62,9 @@
 			children = (
 				498A310527FB01450041EFEB /* AppDelegate.swift */,
 				498A310727FB01450041EFEB /* SceneDelegate.swift */,
-				498A310B27FB01450041EFEB /* Main.storyboard */,
 				498A311C27FB018D0041EFEB /* LoginViewController.swift */,
+				498A310B27FB01450041EFEB /* Main.storyboard */,
+				4909C91C27FDE4550045DEB8 /* MenuViewController.swift */,
 				498A311127FB01480041EFEB /* Assets.xcassets */,
 				498A311327FB01480041EFEB /* LaunchScreen.storyboard */,
 				498A311627FB01480041EFEB /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				498A311D27FB018D0041EFEB /* LoginViewController.swift in Sources */,
+				4909C91D27FDE4550045DEB8 /* MenuViewController.swift in Sources */,
 				498A311027FB01450041EFEB /* HomeWork1_9.xcdatamodeld in Sources */,
 				498A310627FB01450041EFEB /* AppDelegate.swift in Sources */,
 				498A310827FB01450041EFEB /* SceneDelegate.swift in Sources */,
