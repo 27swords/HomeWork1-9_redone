@@ -24,6 +24,8 @@
 		49C158102805B3F500544E1C /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1580F2805B3F500544E1C /* FriendsCollectionViewCell.swift */; };
 		49C158152805F9DF00544E1C /* FriendsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C158142805F9DF00544E1C /* FriendsStruct.swift */; };
 		49C158172805FA1D00544E1C /* GroupStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C158162805FA1D00544E1C /* GroupStruct.swift */; };
+		49ECA3DC280C4AF6002013CF /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ECA3DB280C4AF6002013CF /* LikeControl.swift */; };
+		49ECA3DE280C571E002013CF /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ECA3DD280C571E002013CF /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		49C1580F2805B3F500544E1C /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 		49C158142805F9DF00544E1C /* FriendsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsStruct.swift; sourceTree = "<group>"; };
 		49C158162805FA1D00544E1C /* GroupStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStruct.swift; sourceTree = "<group>"; };
+		49ECA3DB280C4AF6002013CF /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		49ECA3DD280C571E002013CF /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,20 +63,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		495AA53927FF5ED900A647AD /* AllGroup */ = {
-			isa = PBXGroup;
-			children = (
-				495AA53A27FF5F3800A647AD /* GroupTableViewController.swift */,
-				495AA53C27FF5F8700A647AD /* GroupCellTableViewCell.swift */,
-			);
-			path = AllGroup;
-			sourceTree = "<group>";
-		};
 		495AA53E27FF74AD00A647AD /* MyGroup */ = {
 			isa = PBXGroup;
 			children = (
 				495AA54127FF74EB00A647AD /* MyGroupTableViewController.swift */,
+				495AA53A27FF5F3800A647AD /* GroupTableViewController.swift */,
 				495AA53F27FF74DA00A647AD /* MyGroupTableViewCell.swift */,
+				495AA53C27FF5F8700A647AD /* GroupCellTableViewCell.swift */,
 			);
 			path = MyGroup;
 			sourceTree = "<group>";
@@ -80,10 +77,12 @@
 		495AE5092800B40300853CF7 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				49C158092805ABB700544E1C /* FriendsTableViewCell.swift */,
 				49C1580B2805ABF600544E1C /* FriendsTableViewController.swift */,
 				49C1580D2805AC3100544E1C /* FriendsCollectionViewController.swift */,
+				49C158092805ABB700544E1C /* FriendsTableViewCell.swift */,
 				49C1580F2805B3F500544E1C /* FriendsCollectionViewCell.swift */,
+				49ECA3DB280C4AF6002013CF /* LikeControl.swift */,
+				49ECA3DD280C571E002013CF /* AvatarView.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -110,13 +109,12 @@
 				49C158112805F98C00544E1C /* Model */,
 				495AE5092800B40300853CF7 /* Friends */,
 				495AA53E27FF74AD00A647AD /* MyGroup */,
-				495AA53927FF5ED900A647AD /* AllGroup */,
 				498A310527FB01450041EFEB /* AppDelegate.swift */,
 				498A310727FB01450041EFEB /* SceneDelegate.swift */,
 				498A311C27FB018D0041EFEB /* LoginViewController.swift */,
 				498A310B27FB01450041EFEB /* Main.storyboard */,
-				498A311127FB01480041EFEB /* Assets.xcassets */,
 				498A311327FB01480041EFEB /* LaunchScreen.storyboard */,
+				498A311127FB01480041EFEB /* Assets.xcassets */,
 				498A311627FB01480041EFEB /* Info.plist */,
 				498A310E27FB01450041EFEB /* HomeWork1_9.xcdatamodeld */,
 			);
@@ -205,8 +203,10 @@
 			files = (
 				49C1580A2805ABB700544E1C /* FriendsTableViewCell.swift in Sources */,
 				498A311D27FB018D0041EFEB /* LoginViewController.swift in Sources */,
+				49ECA3DC280C4AF6002013CF /* LikeControl.swift in Sources */,
 				49C1580E2805AC3100544E1C /* FriendsCollectionViewController.swift in Sources */,
 				49C158152805F9DF00544E1C /* FriendsStruct.swift in Sources */,
+				49ECA3DE280C571E002013CF /* AvatarView.swift in Sources */,
 				495AA54027FF74DA00A647AD /* MyGroupTableViewCell.swift in Sources */,
 				49C158102805B3F500544E1C /* FriendsCollectionViewCell.swift in Sources */,
 				49C158172805FA1D00544E1C /* GroupStruct.swift in Sources */,

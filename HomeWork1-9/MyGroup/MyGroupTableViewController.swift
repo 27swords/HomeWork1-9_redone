@@ -9,7 +9,7 @@ import UIKit
 
 class MyGroupTableViewController: UITableViewController {
     
-    var mySubscribedGroups = [String]()
+    var mySubscribedGroups: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,6 @@ class MyGroupTableViewController: UITableViewController {
         let myGroup = mySubscribedGroups[indexPath.item]
     
         myListCell?.myGroupLabel.text = myGroup
-        // не могу понять как перенести фото группы
         myListCell?.photosMyGroupImage.image = UIImage(named: myGroup)
         
         return myListCell ?? UITableViewCell()
