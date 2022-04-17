@@ -26,6 +26,7 @@
 		49C158172805FA1D00544E1C /* GroupStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C158162805FA1D00544E1C /* GroupStruct.swift */; };
 		49ECA3DC280C4AF6002013CF /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ECA3DB280C4AF6002013CF /* LikeControl.swift */; };
 		49ECA3DE280C571E002013CF /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ECA3DD280C571E002013CF /* AvatarView.swift */; };
+		49ECA3E4280CC306002013CF /* GradientLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ECA3E3280CC306002013CF /* GradientLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		49C158162805FA1D00544E1C /* GroupStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStruct.swift; sourceTree = "<group>"; };
 		49ECA3DB280C4AF6002013CF /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		49ECA3DD280C571E002013CF /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		49ECA3E3280CC306002013CF /* GradientLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		495AA53E27FF74AD00A647AD /* MyGroup */ = {
+		495AA53E27FF74AD00A647AD /* Group */ = {
 			isa = PBXGroup;
 			children = (
 				495AA54127FF74EB00A647AD /* MyGroupTableViewController.swift */,
@@ -71,7 +73,7 @@
 				495AA53F27FF74DA00A647AD /* MyGroupTableViewCell.swift */,
 				495AA53C27FF5F8700A647AD /* GroupCellTableViewCell.swift */,
 			);
-			path = MyGroup;
+			path = Group;
 			sourceTree = "<group>";
 		};
 		495AE5092800B40300853CF7 /* Friends */ = {
@@ -106,12 +108,12 @@
 		498A310427FB01450041EFEB /* HomeWork1-9 */ = {
 			isa = PBXGroup;
 			children = (
+				49ECA3E7280CD693002013CF /* LoginView */,
 				49C158112805F98C00544E1C /* Model */,
 				495AE5092800B40300853CF7 /* Friends */,
-				495AA53E27FF74AD00A647AD /* MyGroup */,
+				495AA53E27FF74AD00A647AD /* Group */,
 				498A310527FB01450041EFEB /* AppDelegate.swift */,
 				498A310727FB01450041EFEB /* SceneDelegate.swift */,
-				498A311C27FB018D0041EFEB /* LoginViewController.swift */,
 				498A310B27FB01450041EFEB /* Main.storyboard */,
 				498A311327FB01480041EFEB /* LaunchScreen.storyboard */,
 				498A311127FB01480041EFEB /* Assets.xcassets */,
@@ -128,6 +130,15 @@
 				49C158162805FA1D00544E1C /* GroupStruct.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		49ECA3E7280CD693002013CF /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				498A311C27FB018D0041EFEB /* LoginViewController.swift */,
+				49ECA3E3280CC306002013CF /* GradientLoginView.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 				49C158102805B3F500544E1C /* FriendsCollectionViewCell.swift in Sources */,
 				49C158172805FA1D00544E1C /* GroupStruct.swift in Sources */,
 				495AA54227FF74EB00A647AD /* MyGroupTableViewController.swift in Sources */,
+				49ECA3E4280CC306002013CF /* GradientLoginView.swift in Sources */,
 				49C1580C2805ABF600544E1C /* FriendsTableViewController.swift in Sources */,
 				498A311027FB01450041EFEB /* HomeWork1_9.xcdatamodeld in Sources */,
 				498A310627FB01450041EFEB /* AppDelegate.swift in Sources */,
