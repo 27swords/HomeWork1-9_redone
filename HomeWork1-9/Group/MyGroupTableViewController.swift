@@ -8,56 +8,66 @@
 import UIKit
 
 class MyGroupTableViewController: UITableViewController {
-    
-    var mySubscribedGroups: [String] = []
+
+    var mySubscribedGroups = [AllGroup]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mySubscribedGroups = subscribedGroups
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        mySubscribedGroups.count
+        return mySubscribedGroups.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupList", for: indexPath) as? MyGroupTableViewCell
+        let group = mySubscribedGroups[indexPath.row]
         
-        let myListCell = tableView.dequeueReusableCell(withIdentifier: "MyGroupList", for: indexPath) as? MyGroupTableViewCell
+        cell?.myGroupLabel.text = group.nameGroup
+        cell?.photosMyGroupImage.image = UIImage(named: group.photoGroup)
         
-        let myGroup = mySubscribedGroups[indexPath.item]
-    
-        myListCell?.myGroupLabel.text = myGroup
-        myListCell?.photosMyGroupImage.image = UIImage(named: myGroup)
-        
-        return myListCell ?? UITableViewCell()
+        return cell ?? UITableViewCell()
     }
     
-    // Subscription method
-    @IBAction func addGroup(segue: UIStoryboardSegue) {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        mySubscribedGroups.swapAt(sourceIndexPath.item, destinationIndexPath.item)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            tableView.beginUpdates()
+            
+            let removedItem = mySubscribedGroups.remove(at: indexPath.row)
+            
+            unSubscribedGroups.append(removedItem)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            tableView.endUpdates()
+        } else if editingStyle == .insert {
+            
+        }
+    }
 
-        if segue.identifier == "addGroup" {
-            guard let allGroupController = segue.source as? GroupTableViewController else { return }
-
-            if let indexPath = allGroupController.tableView.indexPathForSelectedRow {
-
-                let group = allGroupController.groupsNames[indexPath.item]
-
-                if !mySubscribedGroups.contains(group.nameGroup) {
-
-                    mySubscribedGroups.append(group.nameGroup)
-
-                    tableView.reloadData()
-                }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddGroup" {
+            if let newGroupsVC = segue.destination as? GroupTableViewController {
+                newGroupsVC.delegate = self
             }
         }
     }
-    
-    // Unsubscribe method
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == .delete {
-            mySubscribedGroups.remove(at: indexPath.row)
-            
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
+}
+
+extension MyGroupTableViewController: AllGroupsTableViewControllerDelegate {
+    func userSubscribed(group: [AllGroup]) {
+        tableView.reloadData()
     }
 }
+

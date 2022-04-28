@@ -7,19 +7,53 @@
 
 import Foundation
 
-struct Friend {
-    let name: String
-    let avatar: String
-    let photos: [String]
-    
-    static var friends: [Friend] = [
-        
-        Friend(name: "Mark", avatar: "Mark_image", photos: ["Mark_image"]),
-        Friend(name: "Alice", avatar: "Alice_image", photos: ["Alice_image"]),
-        Friend(name: "Liza", avatar: "Liza_image", photos: ["Liza_image"]),
-        Friend(name: "Adam", avatar: "Adam_image", photos: ["Adam_image"]),
-        Friend(name: "Max", avatar: "Max_image", photos: ["Max_image"]),
-        Friend(name: "Alex", avatar: "Alex_image", photos: ["Alex_image"]),
-        Friend(name: "Dashka", avatar: "Dashka_image", photos: ["Dashka_image"])
-        ]
+struct Photo {
+    let namePhoto: String
 }
+
+struct Friend {
+    let id: UUID = .init()
+    let name: String
+    let avatar: Photo
+    let photos: [Photo]
+
+}
+
+var allFriends = [
+    Friend(
+        name: "Mark",
+        avatar:Photo(namePhoto: "Mark_image"),
+        photos: [Photo(namePhoto: "Mark_image"),
+                 Photo(namePhoto: "Alice_image")]),
+   
+    Friend(
+        name: "Alice",
+        avatar: Photo(namePhoto: "Alice_image"),
+        photos: [Photo(namePhoto: "Alice_image")]),
+    
+    Friend(
+        name: "Liza",
+        avatar: Photo(namePhoto: "Liza_image"),
+        photos: [Photo(namePhoto: "Liza_image")]),
+    
+    Friend(
+        name: "Adam",
+        avatar: Photo(namePhoto: "Adam_image"),
+        photos: [Photo(namePhoto: "Adam_image")]),
+    
+    Friend(
+        name: "Max",
+        avatar: Photo(namePhoto: "Max_image"),
+        photos: [Photo(namePhoto: "Max_image")]),
+    
+    Friend(
+        name: "Alex",
+        avatar: Photo(namePhoto: "Alex_image"),
+        photos: [Photo(namePhoto: "Alex_image")]),
+    
+    Friend(
+        name: "Dashka",
+        avatar: Photo(namePhoto: "Dashka_image"),
+        photos: [Photo(namePhoto: "Dashka_image")])
+
+]

@@ -9,8 +9,8 @@ import UIKit
 
 class GradientLoginView: UIView {
     
-    var startColor: UIColor = .systemOrange
-    var endColor: UIColor = .systemYellow
+    var startColor: UIColor = .systemPink
+    var endColor: UIColor = .systemOrange
     
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else {

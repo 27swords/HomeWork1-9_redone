@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494470D128131DF5007B6460 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494470D028131DF5007B6460 /* NewsTableViewController.swift */; };
+		494470D328131E7D007B6460 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494470D228131E7D007B6460 /* NewsTableViewCell.swift */; };
+		494470D528131EAD007B6460 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494470D428131EAD007B6460 /* NewsTableViewCell.xib */; };
+		494470D728132D07007B6460 /* NewsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494470D628132D07007B6460 /* NewsStruct.swift */; };
 		495AA53B27FF5F3800A647AD /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AA53A27FF5F3800A647AD /* GroupTableViewController.swift */; };
 		495AA53D27FF5F8700A647AD /* GroupCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AA53C27FF5F8700A647AD /* GroupCellTableViewCell.swift */; };
 		495AA54027FF74DA00A647AD /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AA53F27FF74DA00A647AD /* MyGroupTableViewCell.swift */; };
 		495AA54227FF74EB00A647AD /* MyGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AA54127FF74EB00A647AD /* MyGroupTableViewController.swift */; };
+		495ABA4F2819C8D2007AACA8 /* PhotoSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495ABA4E2819C8D2007AACA8 /* PhotoSwipeViewController.swift */; };
+		49827D162814661C0000D83A /* LikePostControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49827D152814661C0000D83A /* LikePostControl.swift */; };
 		498A310627FB01450041EFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A310527FB01450041EFEB /* AppDelegate.swift */; };
 		498A310827FB01450041EFEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A310727FB01450041EFEB /* SceneDelegate.swift */; };
 		498A310D27FB01450041EFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498A310B27FB01450041EFEB /* Main.storyboard */; };
@@ -30,10 +36,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		494470D028131DF5007B6460 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		494470D228131E7D007B6460 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		494470D428131EAD007B6460 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		494470D628132D07007B6460 /* NewsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsStruct.swift; sourceTree = "<group>"; };
 		495AA53A27FF5F3800A647AD /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
 		495AA53C27FF5F8700A647AD /* GroupCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellTableViewCell.swift; sourceTree = "<group>"; };
 		495AA53F27FF74DA00A647AD /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewCell.swift; sourceTree = "<group>"; };
 		495AA54127FF74EB00A647AD /* MyGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewController.swift; sourceTree = "<group>"; };
+		495ABA4E2819C8D2007AACA8 /* PhotoSwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSwipeViewController.swift; sourceTree = "<group>"; };
+		49827D152814661C0000D83A /* LikePostControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePostControl.swift; sourceTree = "<group>"; };
 		498A310227FB01450041EFEB /* HomeWork1-9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWork1-9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		498A310527FB01450041EFEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		498A310727FB01450041EFEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,20 +77,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		494470CF28131DB0007B6460 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				49827D152814661C0000D83A /* LikePostControl.swift */,
+				494470D028131DF5007B6460 /* NewsTableViewController.swift */,
+				494470D228131E7D007B6460 /* NewsTableViewCell.swift */,
+				494470D428131EAD007B6460 /* NewsTableViewCell.xib */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		495AA53E27FF74AD00A647AD /* Group */ = {
 			isa = PBXGroup;
 			children = (
-				495AA54127FF74EB00A647AD /* MyGroupTableViewController.swift */,
 				495AA53A27FF5F3800A647AD /* GroupTableViewController.swift */,
+				495AA54127FF74EB00A647AD /* MyGroupTableViewController.swift */,
 				495AA53F27FF74DA00A647AD /* MyGroupTableViewCell.swift */,
 				495AA53C27FF5F8700A647AD /* GroupCellTableViewCell.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
 		};
+		495ABA4D2819C897007AACA8 /* SwipePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				495ABA4E2819C8D2007AACA8 /* PhotoSwipeViewController.swift */,
+			);
+			path = SwipePhoto;
+			sourceTree = "<group>";
+		};
 		495AE5092800B40300853CF7 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				495ABA4D2819C897007AACA8 /* SwipePhoto */,
 				49C1580B2805ABF600544E1C /* FriendsTableViewController.swift */,
 				49C1580D2805AC3100544E1C /* FriendsCollectionViewController.swift */,
 				49C158092805ABB700544E1C /* FriendsTableViewCell.swift */,
@@ -108,14 +140,15 @@
 		498A310427FB01450041EFEB /* HomeWork1-9 */ = {
 			isa = PBXGroup;
 			children = (
-				49ECA3E7280CD693002013CF /* LoginView */,
-				49C158112805F98C00544E1C /* Model */,
-				495AE5092800B40300853CF7 /* Friends */,
-				495AA53E27FF74AD00A647AD /* Group */,
-				498A310527FB01450041EFEB /* AppDelegate.swift */,
-				498A310727FB01450041EFEB /* SceneDelegate.swift */,
 				498A310B27FB01450041EFEB /* Main.storyboard */,
 				498A311327FB01480041EFEB /* LaunchScreen.storyboard */,
+				498A310527FB01450041EFEB /* AppDelegate.swift */,
+				498A310727FB01450041EFEB /* SceneDelegate.swift */,
+				49C158112805F98C00544E1C /* Model */,
+				49ECA3E7280CD693002013CF /* LoginView */,
+				495AE5092800B40300853CF7 /* Friends */,
+				495AA53E27FF74AD00A647AD /* Group */,
+				494470CF28131DB0007B6460 /* News */,
 				498A311127FB01480041EFEB /* Assets.xcassets */,
 				498A311627FB01480041EFEB /* Info.plist */,
 				498A310E27FB01450041EFEB /* HomeWork1_9.xcdatamodeld */,
@@ -128,6 +161,7 @@
 			children = (
 				49C158142805F9DF00544E1C /* FriendsStruct.swift */,
 				49C158162805FA1D00544E1C /* GroupStruct.swift */,
+				494470D628132D07007B6460 /* NewsStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +235,7 @@
 			files = (
 				498A311527FB01480041EFEB /* LaunchScreen.storyboard in Resources */,
 				498A311227FB01480041EFEB /* Assets.xcassets in Resources */,
+				494470D528131EAD007B6460 /* NewsTableViewCell.xib in Resources */,
 				498A310D27FB01450041EFEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,17 +253,22 @@
 				49C1580E2805AC3100544E1C /* FriendsCollectionViewController.swift in Sources */,
 				49C158152805F9DF00544E1C /* FriendsStruct.swift in Sources */,
 				49ECA3DE280C571E002013CF /* AvatarView.swift in Sources */,
+				495ABA4F2819C8D2007AACA8 /* PhotoSwipeViewController.swift in Sources */,
 				495AA54027FF74DA00A647AD /* MyGroupTableViewCell.swift in Sources */,
 				49C158102805B3F500544E1C /* FriendsCollectionViewCell.swift in Sources */,
+				494470D128131DF5007B6460 /* NewsTableViewController.swift in Sources */,
+				494470D728132D07007B6460 /* NewsStruct.swift in Sources */,
 				49C158172805FA1D00544E1C /* GroupStruct.swift in Sources */,
 				495AA54227FF74EB00A647AD /* MyGroupTableViewController.swift in Sources */,
 				49ECA3E4280CC306002013CF /* GradientLoginView.swift in Sources */,
 				49C1580C2805ABF600544E1C /* FriendsTableViewController.swift in Sources */,
 				498A311027FB01450041EFEB /* HomeWork1_9.xcdatamodeld in Sources */,
 				498A310627FB01450041EFEB /* AppDelegate.swift in Sources */,
+				49827D162814661C0000D83A /* LikePostControl.swift in Sources */,
 				498A310827FB01450041EFEB /* SceneDelegate.swift in Sources */,
 				495AA53B27FF5F3800A647AD /* GroupTableViewController.swift in Sources */,
 				495AA53D27FF5F8700A647AD /* GroupCellTableViewCell.swift in Sources */,
+				494470D328131E7D007B6460 /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
