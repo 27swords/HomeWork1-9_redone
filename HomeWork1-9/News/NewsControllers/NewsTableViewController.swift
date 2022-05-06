@@ -37,7 +37,7 @@ class NewsTableViewController: UITableViewController {
         return UITableViewCell()
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 600
-    }
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+            return UITableView.automaticDimension
+            }
 }

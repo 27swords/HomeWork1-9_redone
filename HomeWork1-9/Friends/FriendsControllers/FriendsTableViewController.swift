@@ -35,6 +35,7 @@ class FriendsTableViewController: UITableViewController {
                 result.append(sectionFriend)
             }
         }
+        
         return result
     }
     
@@ -82,11 +83,10 @@ class FriendsTableViewController: UITableViewController {
         let sectionFriend = sectionFriend[indexPath.section]
         let friend = sectionFriend.friend[indexPath.row]
         
-        if let friendIndex = allFriends.firstIndex(where: { $0.name == friend.name }) {
+        if let friendIndex = allFriends.firstIndex(where: { $0.id == friend.id }) {
             photosVC.frinedsIndex = friendIndex
         }
         
-        photosVC.frinedsIndex = indexPath.row
         photosVC.title = friend.name
     }
 }

@@ -50,7 +50,7 @@ class PhotoSwipeViewController: UIViewController {
         [firstImageView, nextImageView].first(where: { $0.isHidden })
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         currentPhotoIndex = photos.isEmpty ? nil : 0

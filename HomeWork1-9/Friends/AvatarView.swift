@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class AvatarView: UIView {
     
     override func draw(_ rect: CGRect) {

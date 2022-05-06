@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FriendsCollectionViewController: UICollectionViewController {
+class FriendsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var frinedsIndex: Int = 0
     
@@ -30,5 +30,11 @@ class FriendsCollectionViewController: UICollectionViewController {
         cell?.friendsPhotoImage.image = UIImage(named: photo.namePhoto)
         
         return cell ?? UICollectionViewCell()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let swipeVC = segue.destination as? PhotoSwipeViewController {
+            swipeVC.photos = friend.photos
+        }
     }
 }

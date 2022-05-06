@@ -36,7 +36,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
                        options: [ UIImageView.AnimationOptions.allowUserInteraction, .curveEaseInOut],
                        animations: {
             self.likeControl.likeView?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            
+
         }) { _ in
             UIView.animate(withDuration: 0.3,
                            delay: 0,
@@ -46,7 +46,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
                            animations: {
                 self.likeControl.likeView?.transform = CGAffineTransform(scaleX: 1, y: 1)
             })
-            
+
         }
     }
 }
