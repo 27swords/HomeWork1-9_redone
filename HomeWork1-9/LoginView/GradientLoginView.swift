@@ -17,8 +17,7 @@ class GradientLoginView: UIView {
             return
         }
         
-        let colors = [startColor.cgColor, endColor.cgColor]
-    
+    let colors = [startColor.cgColor, endColor.cgColor]
     let colorSpace = CGColorSpaceCreateDeviceRGB()
     let colorLocation: [CGFloat] = [0.0, 1.0]
     

@@ -9,6 +9,7 @@
 import UIKit
 
 struct AllGroup {
+
     let idGroup: String
     let nameGroup: String
     let photoGroup: String
@@ -25,3 +26,10 @@ var unSubscribedGroups: [AllGroup] = [AllGroup(idGroup: "1", nameGroup: "Party",
                                       AllGroup(idGroup: "3", nameGroup: "NewYear", photoGroup: "fireworks"),
                                       AllGroup(idGroup: "4", nameGroup: "Work searches", photoGroup: "success"),
                                       AllGroup(idGroup: "5", nameGroup: "Memes", photoGroup: "positive-review"),]
+
+
+
+
+
+
+

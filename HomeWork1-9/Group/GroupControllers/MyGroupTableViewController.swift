@@ -51,13 +51,11 @@ class MyGroupTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             tableView.endUpdates()
-        } else if editingStyle == .insert {
-            
-        }
+        } else if editingStyle == .insert { }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddGroup" {
+        if segue.identifier == "addGroup" {
             if let newGroupsVC = segue.destination as? GroupTableViewController {
                 newGroupsVC.delegate = self
             }

@@ -8,10 +8,12 @@
 import Foundation
 
 struct Photo {
+    
     let namePhoto: String
 }
 
 struct Friend {
+    
     let id: UUID = .init()
     let name: String
     let avatar: Photo
