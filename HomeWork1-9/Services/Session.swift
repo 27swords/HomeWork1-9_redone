@@ -7,16 +7,14 @@
 
 import Foundation
 
-class Session {
+// Singleton
+final class Session {
     
-    private init() {
-        self.token = String()
-        self.userID = Int()
-    }
-
-    var token: String
-    var userID: Int
-
-    static var session = Session()
-
+    static let session = Session()
+    
+    private init() {}
+    
+    // Access token
+    var token: String?
+    var userID: Int?
 }

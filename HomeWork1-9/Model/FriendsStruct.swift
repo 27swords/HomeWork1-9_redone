@@ -51,11 +51,5 @@ var allFriends = [
     Friend(
         name: "Alex",
         avatar: Photo(namePhoto: "Alex_image"),
-        photos: [Photo(namePhoto: "Alex_image")]),
-    
-    Friend(
-        name: "Dashka",
-        avatar: Photo(namePhoto: "Dashka_image"),
-        photos: [Photo(namePhoto: "Dashka_image")])
-
+        photos: [Photo(namePhoto: "Alex_image")])
 ]

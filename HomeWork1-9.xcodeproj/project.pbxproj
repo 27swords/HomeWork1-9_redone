@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4919C5C12844EABC008AA1BC /* VkPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919C5C02844EABC008AA1BC /* VkPhotoService.swift */; };
+		4919C5C32844ECEB008AA1BC /* VkGroupsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919C5C22844ECEB008AA1BC /* VkGroupsService.swift */; };
+		4919C5C52844EEB1008AA1BC /* VkSearchGroupsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919C5C42844EEB1008AA1BC /* VkSearchGroupsService.swift */; };
 		4937FDB2282D9DD1007BA526 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4937FDB1282D9DD1007BA526 /* Session.swift */; };
 		494470D128131DF5007B6460 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494470D028131DF5007B6460 /* NewsTableViewController.swift */; };
 		494470D328131E7D007B6460 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494470D228131E7D007B6460 /* NewsTableViewCell.swift */; };
@@ -17,6 +20,7 @@
 		495AA54027FF74DA00A647AD /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AA53F27FF74DA00A647AD /* MyGroupTableViewCell.swift */; };
 		495AA54227FF74EB00A647AD /* MyGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AA54127FF74EB00A647AD /* MyGroupTableViewController.swift */; };
 		495ABA4F2819C8D2007AACA8 /* PhotoSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495ABA4E2819C8D2007AACA8 /* PhotoSwipeViewController.swift */; };
+		4960413E2841051D00DAF0E9 /* VkFriendsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4960413D2841051D00DAF0E9 /* VkFriendsService.swift */; };
 		49827D162814661C0000D83A /* LikePostControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49827D152814661C0000D83A /* LikePostControl.swift */; };
 		498A310627FB01450041EFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A310527FB01450041EFEB /* AppDelegate.swift */; };
 		498A310827FB01450041EFEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A310727FB01450041EFEB /* SceneDelegate.swift */; };
@@ -41,6 +45,9 @@
 /* Begin PBXFileReference section */
 		04B1E736472DC851D9615756 /* Pods_HomeWork1_9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeWork1_9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DC89B7D9BAC60A73A8D993 /* Pods-HomeWork1-9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeWork1-9.debug.xcconfig"; path = "Target Support Files/Pods-HomeWork1-9/Pods-HomeWork1-9.debug.xcconfig"; sourceTree = "<group>"; };
+		4919C5C02844EABC008AA1BC /* VkPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkPhotoService.swift; sourceTree = "<group>"; };
+		4919C5C22844ECEB008AA1BC /* VkGroupsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkGroupsService.swift; sourceTree = "<group>"; };
+		4919C5C42844EEB1008AA1BC /* VkSearchGroupsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkSearchGroupsService.swift; sourceTree = "<group>"; };
 		4937FDB1282D9DD1007BA526 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		494470D028131DF5007B6460 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		494470D228131E7D007B6460 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -51,6 +58,7 @@
 		495AA53F27FF74DA00A647AD /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewCell.swift; sourceTree = "<group>"; };
 		495AA54127FF74EB00A647AD /* MyGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewController.swift; sourceTree = "<group>"; };
 		495ABA4E2819C8D2007AACA8 /* PhotoSwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSwipeViewController.swift; sourceTree = "<group>"; };
+		4960413D2841051D00DAF0E9 /* VkFriendsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkFriendsService.swift; sourceTree = "<group>"; };
 		49827D152814661C0000D83A /* LikePostControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePostControl.swift; sourceTree = "<group>"; };
 		498A310227FB01450041EFEB /* HomeWork1-9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWork1-9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		498A310527FB01450041EFEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +261,10 @@
 		49DC5C062832B8EC000E9A08 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4960413D2841051D00DAF0E9 /* VkFriendsService.swift */,
+				4919C5C02844EABC008AA1BC /* VkPhotoService.swift */,
+				4919C5C22844ECEB008AA1BC /* VkGroupsService.swift */,
+				4919C5C42844EEB1008AA1BC /* VkSearchGroupsService.swift */,
 				4937FDB1282D9DD1007BA526 /* Session.swift */,
 			);
 			path = Services;
@@ -395,7 +407,10 @@
 			files = (
 				49C1580A2805ABB700544E1C /* FriendsTableViewCell.swift in Sources */,
 				498A311D27FB018D0041EFEB /* LoginViewController.swift in Sources */,
+				4919C5C52844EEB1008AA1BC /* VkSearchGroupsService.swift in Sources */,
 				49ECA3DC280C4AF6002013CF /* LikeControl.swift in Sources */,
+				4919C5C12844EABC008AA1BC /* VkPhotoService.swift in Sources */,
+				4919C5C32844ECEB008AA1BC /* VkGroupsService.swift in Sources */,
 				49C1580E2805AC3100544E1C /* FriendsCollectionViewController.swift in Sources */,
 				49C158152805F9DF00544E1C /* FriendsStruct.swift in Sources */,
 				49ECA3DE280C571E002013CF /* AvatarView.swift in Sources */,
@@ -404,6 +419,7 @@
 				495AA54027FF74DA00A647AD /* MyGroupTableViewCell.swift in Sources */,
 				49C158102805B3F500544E1C /* FriendsCollectionViewCell.swift in Sources */,
 				494470D128131DF5007B6460 /* NewsTableViewController.swift in Sources */,
+				4960413E2841051D00DAF0E9 /* VkFriendsService.swift in Sources */,
 				494470D728132D07007B6460 /* NewsStruct.swift in Sources */,
 				49C158172805FA1D00544E1C /* GroupStruct.swift in Sources */,
 				495AA54227FF74EB00A647AD /* MyGroupTableViewController.swift in Sources */,
@@ -493,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -548,7 +564,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

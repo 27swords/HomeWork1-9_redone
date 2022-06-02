@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmV-Wo-JH8">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhC-3l-nOq">
                                 <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -28,26 +28,27 @@
                             </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UUb-9g-mIZ"/>
-                        <color key="backgroundColor" red="0.80829012389999999" green="0.91764098409999995" blue="0.98270767930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97176331279999995" green="0.77894109489999996" blue="0.64590483899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dmV-Wo-JH8" firstAttribute="trailing" secondItem="UUb-9g-mIZ" secondAttribute="trailing" id="9nD-pV-Aqc"/>
-                            <constraint firstItem="dmV-Wo-JH8" firstAttribute="bottom" secondItem="UUb-9g-mIZ" secondAttribute="bottom" id="GDS-Jn-BTo"/>
-                            <constraint firstItem="dmV-Wo-JH8" firstAttribute="leading" secondItem="UUb-9g-mIZ" secondAttribute="leading" id="pNH-MD-ID0"/>
-                            <constraint firstItem="dmV-Wo-JH8" firstAttribute="top" secondItem="UUb-9g-mIZ" secondAttribute="top" id="ppI-gT-KwE"/>
+                            <constraint firstItem="yhC-3l-nOq" firstAttribute="leading" secondItem="UUb-9g-mIZ" secondAttribute="leading" id="G82-aA-VnD"/>
+                            <constraint firstItem="UUb-9g-mIZ" firstAttribute="bottom" secondItem="yhC-3l-nOq" secondAttribute="bottom" id="Nps-eX-5zy"/>
+                            <constraint firstItem="yhC-3l-nOq" firstAttribute="top" secondItem="UUb-9g-mIZ" secondAttribute="top" id="ecs-3h-aAB"/>
+                            <constraint firstItem="UUb-9g-mIZ" firstAttribute="trailing" secondItem="yhC-3l-nOq" secondAttribute="trailing" id="xNh-Ha-IMK"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginWebView" destination="dmV-Wo-JH8" id="h26-fz-cup"/>
+                        <outlet property="loginWebView" destination="yhC-3l-nOq" id="C7O-sk-L5f"/>
+                        <segue destination="Qlx-tO-64H" kind="presentation" identifier="MessengerMenu" modalPresentationStyle="fullScreen" id="j6e-12-E5l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kp-Vv-x7v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14123.831775700934" y="42.764578833693307"/>
+            <point key="canvasLocation" x="15021" y="-686"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Login View Controller" customClass="LoginViewController" customModule="HomeWork1_9" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" userLabel="Login View Controller" customClass="LoginViewController" customModule="HomeWork1_9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientLoginView" customModule="HomeWork1_9" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -581,6 +582,9 @@
             <point key="canvasLocation" x="14125" y="798"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="j6e-12-E5l"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="LogoImage" width="512" height="512"/>
         <image name="book" catalog="system" width="128" height="99"/>
