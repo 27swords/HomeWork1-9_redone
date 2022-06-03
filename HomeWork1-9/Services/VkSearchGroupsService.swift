@@ -8,40 +8,42 @@
 
 import UIKit
 
-// Search request method
-func VkSearchGroupsService(searchText: String) {
+final class VkSearchGroups {
 
-    guard let token = Session.session.token else { return }
+    // Search request method
+    func VkSearchGroupsService(searchText: String) {
 
-    var urlComponents = URLComponents()
+        guard let token = Session.session.token else { return }
 
-    urlComponents.scheme = "https"
-    urlComponents.host = "api.vk.com"
-    urlComponents.path = "/method/groups.search"
-    urlComponents.queryItems = [
+        var urlComponents = URLComponents()
 
-        URLQueryItem(name: "q", value: searchText),
-        URLQueryItem(name: "type", value: "group"),
-        URLQueryItem(name: "sort", value: "0"),
-        URLQueryItem(name: "count", value: "10"),
-        URLQueryItem(name: "access_token", value: token),
-        URLQueryItem(name: "v", value: "5.131")
-    ]
+        urlComponents.scheme = "https"
+        urlComponents.host = "api.vk.com"
+        urlComponents.path = "/method/groups.search"
+        urlComponents.queryItems = [
 
-    guard let url = urlComponents.url else { return }
+            URLQueryItem(name: "q", value: searchText),
+            URLQueryItem(name: "type", value: "group"),
+            URLQueryItem(name: "sort", value: "0"),
+            URLQueryItem(name: "count", value: "10"),
+            URLQueryItem(name: "access_token", value: token),
+            URLQueryItem(name: "v", value: "5.131")
+        ]
 
-    let request = URLRequest(url: url)
-    URLSession.shared.dataTask(with: request) { data, response, error in
-        guard let data = data, error == nil else {
-            return
-        }
+        guard let url = urlComponents.url else { return }
 
-        do {
-            let result = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
-            print(result)
-        } catch {
-            print(error)
-        }
-    }.resume()
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                return
+            }
+
+            do {
+                let result = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
+                print(result)
+            } catch {
+                print(error)
+            }
+        }.resume()
+    }
 }
-

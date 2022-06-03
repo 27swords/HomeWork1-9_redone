@@ -1,5 +1,5 @@
 //
-//  prostoSwiftFile.swift
+//  Session.swift
 //  HomeWork1-9
 //
 //  Created by Alexander Chervoncev on 12.05.22.

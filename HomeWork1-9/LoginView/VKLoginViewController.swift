@@ -21,10 +21,6 @@ class VKLoginViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAuth()
-        VkPhotoService(id: 0)
-        VkGroupsService()
-        VkSearchGroupsService(searchText: "")
-        loadFriendsVk()
     }
 }
 
