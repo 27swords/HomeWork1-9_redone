@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK: - Struct
 struct SectionFriend {
     let character: Character
     var friend: [Friend]
@@ -14,7 +15,11 @@ struct SectionFriend {
 
 class FriendsTableViewController: UITableViewController {
     
+    //MARK: - Outlets
     @IBOutlet weak var friendsSearchBar: UISearchBar!
+    
+    let friendsService = VkFriends()
+    let photosServise = VkPhoto()
     
     var displayFriends = [Friend]()
     
@@ -39,15 +44,17 @@ class FriendsTableViewController: UITableViewController {
         return result
     }
     
-    //MARK: - Func
-    
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         friendsSearchBar.delegate = self
         displayFriends = allFriends
+        friendsService.loadFriendsVk()
+        photosServise.VkPhotoService(id: 0)
     }
     
+    //MARK: - Methods
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sectionFriend.count
     }
@@ -91,8 +98,7 @@ class FriendsTableViewController: UITableViewController {
     }
 }
 
-// MARK: - extension
-
+// MARK: - Extension
 extension FriendsTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard !searchText.isEmpty else {

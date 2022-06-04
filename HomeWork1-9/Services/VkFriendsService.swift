@@ -6,11 +6,11 @@
 //
 /// Получение списка друзей 
 
-import UIKit
+import Foundation
 
 final class VkFriends {
 
-    // Friends request method 
+    // Friends request method
     func loadFriendsVk() {
         
         guard let token = Session.session.token else { return }

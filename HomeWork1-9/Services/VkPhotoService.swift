@@ -6,7 +6,7 @@
 //
 /// получениче фотографий пользователя
 
-import UIKit
+import Foundation
 
 final class VkPhoto {
 

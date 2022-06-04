@@ -6,7 +6,7 @@
 //
 /// Получение групп пользователя 
 
-import UIKit
+import Foundation
 
 final class VkGroups {
 

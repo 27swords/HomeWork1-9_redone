@@ -7,18 +7,29 @@
 
 import UIKit
 
+//MARK: - Protocol
 protocol AllGroupsTableViewControllerDelegate {
     func userSubscribed(group: [AllGroup])
 }
 
 class GroupTableViewController: UITableViewController {
     
-    var delegate: AllGroupsTableViewControllerDelegate?
+    //MARK: - outlets
+    @IBOutlet weak var allGroupsSearchBar: UISearchBar!
     
+    //MARK: - init
+    var allSubscribedGroups = [AllGroup]()
+    var delegate: AllGroupsTableViewControllerDelegate?
+    let searchGroupService = VkSearchGroups()
+    
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        allGroupsSearchBar.delegate = self
+        searchGroupService.VkSearchGroupsService(searchText: "")
     }
     
+    //MARK: - Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return unSubscribedGroups.count
     }
@@ -56,4 +67,20 @@ class GroupTableViewController: UITableViewController {
         return subscribeAction
     }
     
+}
+
+//MARK: - Extension
+extension GroupTableViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            allSubscribedGroups = unSubscribedGroups
+            tableView.reloadData()
+            return
+        }
+        
+        allSubscribedGroups = unSubscribedGroups.filter { $0.nameGroup.lowercased().contains(searchText.lowercased()) }
+        
+        tableView.reloadData()
+    }
 }

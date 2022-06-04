@@ -430,9 +430,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97176331279999995" green="0.77894109489999996" blue="0.64590483899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="IbF-aH-IDX">
+                            <rect key="frame" x="0.0" y="0.0" width="428" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="MyGroupList" id="ZaS-eQ-TtH" customClass="MyGroupTableViewCell" customModule="HomeWork1_9" customModuleProvider="target">
-                                <rect key="frame" x="20" y="49" width="388" height="60.333332061767578"/>
+                                <rect key="frame" x="20" y="93" width="388" height="60.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZaS-eQ-TtH" id="I1c-RY-6vd">
                                     <rect key="frame" x="0.0" y="0.0" width="388" height="60.333332061767578"/>
@@ -483,6 +488,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myGroupSearchBar" destination="IbF-aH-IDX" id="O5z-kY-ukg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUs-Gm-3Fj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -496,9 +504,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97176331279999995" green="0.77894109489999996" blue="0.64590483899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="2xg-55-wSp">
+                            <rect key="frame" x="0.0" y="0.0" width="428" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="AllGroupCell" id="Cou-r2-Sn6" customClass="GroupCellTableViewCell" customModule="HomeWork1_9" customModuleProvider="target">
-                                <rect key="frame" x="20" y="49" width="388" height="60.333332061767578"/>
+                                <rect key="frame" x="20" y="93" width="388" height="60.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cou-r2-Sn6" id="3P9-D3-oxJ">
                                     <rect key="frame" x="0.0" y="0.0" width="388" height="60.333332061767578"/>
@@ -541,6 +554,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="W8Z-hl-bDf"/>
+                    <connections>
+                        <outlet property="allGroupsSearchBar" destination="2xg-55-wSp" id="ozh-nt-Lxo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rb-R8-HD7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Bu8-UT-9eV" userLabel="Exit" sceneMemberID="exit"/>
@@ -587,10 +603,10 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LogoImage" width="512" height="512"/>
-        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="book" catalog="system" width="32" height="32"/>
         <image name="disable like" width="512" height="512"/>
-        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
-        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="paperplane.fill" catalog="system" width="32" height="32"/>
+        <image name="person.2.fill" catalog="system" width="32" height="32"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

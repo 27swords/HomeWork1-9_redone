@@ -6,7 +6,7 @@
 //
 /// Получение групп по поисковому запросу 
 
-import UIKit
+import Foundation
 
 final class VkSearchGroups {
 
