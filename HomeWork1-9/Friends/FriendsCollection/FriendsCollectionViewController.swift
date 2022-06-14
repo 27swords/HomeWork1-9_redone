@@ -10,31 +10,43 @@ import UIKit
 class FriendsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var frinedsIndex: Int = 0
+    var photoOwnerID: Int?
     
-    var friend: Friend {
-        return allFriends[frinedsIndex]
-    }
-
+    let photoService = PhotoService()
+    var photoData = [PhotosData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let photoOwnerID = photoOwnerID else { return }
+        
+        photoService.loadPhotoVK(ownerID: photoOwnerID) { result in
+            switch result {
+            case .success(let photo):
+                DispatchQueue.main.async {
+                    self.photoData = photo
+                    self.collectionView.reloadData()
+                }
+                
+            case .failure(_):
+                return
+            }
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return friend.photos.count
+        return photoData.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? FriendsCollectionViewCell
-        let photo = friend.photos[indexPath.row]
+        let photoR = photoData
+            .map { $0.sizes }
+            .flatMap { $0 }
+            .filter { $0.type == "r" }
         
-        cell?.friendsPhotoImage.image = UIImage(named: photo.namePhoto)
+        cell?.friendsPhotoImage.loadImage(with: photoR[indexPath.item].url)
         
         return cell ?? UICollectionViewCell()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let swipeVC = segue.destination as? PhotoSwipeViewController {
-            swipeVC.photos = friend.photos
-        }
     }
 }

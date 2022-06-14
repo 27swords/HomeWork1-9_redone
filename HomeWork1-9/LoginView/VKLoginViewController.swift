@@ -48,8 +48,8 @@ extension VKLoginViewController: WKNavigationDelegate {
                 return dict
             }
         if let token = params["access_token"], let userId = params["user_id"] {
-            Session.session.token = token
-            Session.session.userID = Int(userId)
+            Session.shared.token = token
+            Session.shared.userID = Int(userId)
             
             print(token)
             print(userId)

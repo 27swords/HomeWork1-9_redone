@@ -10,7 +10,7 @@ import Foundation
 // Singleton
 final class Session {
     
-    static let session = Session()
+    static let shared = Session()
     
     private init() {}
     
