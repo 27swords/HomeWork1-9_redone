@@ -16,7 +16,7 @@ final class GroupService {
         return session
     }()
 
-    func loadGroupsVK(completion: @escaping (GroupResult) -> ()) {
+    func loadGroups(completion: @escaping (GroupResult) -> ()) {
         guard let token = Session.shared.token else {
             return completion(.failure(.notConfigureURL))
         }

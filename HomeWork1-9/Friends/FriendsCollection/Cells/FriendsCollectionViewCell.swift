@@ -9,12 +9,14 @@ import UIKit
 
 class FriendsCollectionViewCell: UICollectionViewCell {
     
+    //MARK: - Init
     @IBOutlet weak var likeControl: LikeControl!
     @IBOutlet weak var friendsPhotoImage: UIImageView!
     @IBOutlet weak var likeStackView: LikeControl!
     
     var markedAsLiked: ((Bool) -> Void)?
     
+    //MARK: Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -26,6 +28,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
         likeControl.addTarget(self, action: #selector(likeControlTapped), for: .touchUpInside)
     }
     
+    //MARK: - Methods
     @objc func likeControlTapped() {
         likeControl.isSelected = !likeControl.isSelected
         markedAsLiked?(likeControl.isSelected)

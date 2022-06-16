@@ -15,10 +15,10 @@ class FriendsModel: Codable {
 struct ResponseFriends: Codable {
 
     let count: Int
-    let items: [UserData]
+    let items: [FriendsData]
 }
 
-struct UserData: Codable {
+struct FriendsData: Codable {
 
     let id: Int
     let firstName: String

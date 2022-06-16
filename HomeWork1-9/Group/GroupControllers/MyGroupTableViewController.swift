@@ -20,7 +20,7 @@ class MyGroupTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        groupsService.loadGroupsVK { result in
+        groupsService.loadGroups { result in
             switch result {
             case .success(let group):
                 DispatchQueue.main.async {
@@ -32,8 +32,6 @@ class MyGroupTableViewController: UITableViewController {
                 return
             }
         }
-        
-        //myGroupSearchBar.delegate = self
     }
     
     //MARK: - Methods
@@ -59,19 +57,3 @@ class MyGroupTableViewController: UITableViewController {
         SubscribedGroups.swapAt(sourceIndexPath.item, destinationIndexPath.item)
     }
 }
-
-//MARK: - Extension
-
-//extension MyGroupTableViewController: UISearchBarDelegate {
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        guard !searchText.isEmpty else {
-//            mySubscribedGroups = subscribedGroups
-//            tableView.reloadData()
-//            return
-//        }
-//
-//        mySubscribedGroups = subscribedGroups.filter { $0.nameGroup.lowercased().contains(searchText.lowercased()) }
-//
-//        tableView.reloadData()
-//    }
-//}

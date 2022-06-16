@@ -16,16 +16,18 @@ final class PhotoService {
         return session
     }()
     
+    /// функция добавления фотографий пользователя
     func loadPhotoVK(ownerID: Int, completion: @escaping (PhotoResult) -> ()) {
         guard let token = Session.shared.token else {
             return completion(.failure(.notConfigureURL))
         }
         
+        // параметры фотографий 
         let params: [String: String] = [
             "owner_id" : "\(ownerID)",
-            "album_id" : "profile",
+            "album_id" : "wall",
             "v" : "5.131",
-            "extended" : "1"
+            "extended" : "0"
         ]
         
         do {

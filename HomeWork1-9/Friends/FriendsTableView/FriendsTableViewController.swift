@@ -10,7 +10,7 @@ import UIKit
 //MARK: - Struct
 struct SectionFriend {
     let character: Character
-    var friend: [UserData]
+    var friend: [FriendsData]
 }
 
 class FriendsTableViewController: UITableViewController {
@@ -21,7 +21,7 @@ class FriendsTableViewController: UITableViewController {
     private var friendsCount: ResponseFriends?
     
     let friendService = FriendService()
-    var friendsData = [UserData]()
+    var friendsData = [FriendsData]()
     
     var sectionFriend: [SectionFriend] {
         var result = [SectionFriend]()
@@ -45,7 +45,7 @@ class FriendsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        friendService.loadFriendVK { result in
+        friendService.loadFriends { result in
             switch result {
             case .success(let friend):
                 DispatchQueue.main.async {
@@ -57,8 +57,6 @@ class FriendsTableViewController: UITableViewController {
                 return
             }
         }
-        
-        //friendsSearchBar.delegate = self
     }
     
     //MARK: - Methods
@@ -81,10 +79,6 @@ class FriendsTableViewController: UITableViewController {
         
         return cell ?? UITableViewCell()
     }
-//
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard
@@ -101,17 +95,3 @@ class FriendsTableViewController: UITableViewController {
     }
 }
 
-//// MARK: - Extension
-//extension FriendsTableViewController: UISearchBarDelegate {
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        guard !searchText.isEmpty else {
-//            friendService = FriendsModel
-//            tableView.reloadData()
-//            return
-//        }
-//
-//        displayFriends = allFriends.filter { $0.name.lowercased().contains(searchText.lowercased()) }
-//
-//        tableView.reloadData()
-//    }
-//}

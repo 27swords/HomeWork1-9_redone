@@ -9,27 +9,27 @@ import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
     
+    //MARK: - Outlets
     @IBOutlet weak var friendsImage: UIImageView!
     @IBOutlet weak var nameFriendsLabel: UILabel!
     @IBOutlet weak var avatarCellView: AvatarView!
     
     var animator: UIViewPropertyAnimator?
     
+    //MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         
         // Сreating an avatar form
-        friendsImage.layer.cornerRadius = 30
-        friendsImage.contentMode = .scaleAspectFill
-        friendsImage.layer.masksToBounds = true
-        
-        // Сreating avatar shadows
-        friendsImage.layer.shadowColor = UIColor.black.cgColor
-        friendsImage.layer.shadowOpacity = 0.5
-        friendsImage.layer.shadowRadius = 8
-        friendsImage.layer.shadowOffset = CGSize.zero 
+        friendsImage.layer.borderWidth = 1
+        friendsImage.layer.masksToBounds = false
+        friendsImage.layer.borderColor = UIColor.clear.cgColor
+        friendsImage.layer.cornerRadius = friendsImage.frame.height / 2
+        friendsImage.clipsToBounds = true
+
     }
     
+    //MARK: - Methods
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

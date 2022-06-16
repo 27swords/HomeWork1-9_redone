@@ -8,7 +8,7 @@
 import Foundation
 
 final class FriendService {
-    typealias FriendsResult = Result<[UserData], Constants.Service.ServiceError>
+    typealias FriendsResult = Result<[FriendsData], Constants.Service.ServiceError>
 
     private let session: URLSession = {
         let config = URLSessionConfiguration.default
@@ -16,14 +16,16 @@ final class FriendService {
         return session
     }()
 
-    func loadFriendVK(completion: @escaping (FriendsResult) -> ()) {
+    ///  функция добавления друзей 
+    func loadFriends(completion: @escaping (FriendsResult) -> ()) {
         guard let token = Session.shared.token else {
             return completion(.failure(.notConfigureURL))
         }
 
+        /// параметры для отображения 
         let params: [String: String] = [
             "v" : "5.131",
-            "fields": "photo_100, online"
+            "fields": "photo_100"
         ]
 
         do {

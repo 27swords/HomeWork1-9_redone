@@ -9,12 +9,14 @@ import UIKit
 
 class FriendsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    //MARK: - Init
     var frinedsIndex: Int = 0
     var photoOwnerID: Int?
     
     let photoService = PhotoService()
     var photoData = [PhotosData]()
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +36,7 @@ class FriendsCollectionViewController: UICollectionViewController, UICollectionV
         }
     }
     
+    //MARK: - Methods
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photoData.count
     }
