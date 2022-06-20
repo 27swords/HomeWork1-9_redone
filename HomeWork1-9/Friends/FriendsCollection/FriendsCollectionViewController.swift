@@ -34,6 +34,8 @@ class FriendsCollectionViewController: UICollectionViewController, UICollectionV
                 return
             }
         }
+        
+        
     }
     
     //MARK: - Methods

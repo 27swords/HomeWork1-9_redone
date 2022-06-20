@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class GroupService {
     typealias GroupResult = Result<[GroupData], Constants.Service.ServiceError>
@@ -53,6 +54,24 @@ final class GroupService {
             }.resume()
         } catch {
             completion(.failure(.notConfigureURL))
+        }
+    }
+    
+    ///  Метод сохранения групп
+    func saveGroupData(_ groups: [GroupsModel]) {
+        
+        do {
+            
+            let realm = try Realm()
+            
+            realm.beginWrite()
+            realm.add(groups)
+            
+            try realm.commitWrite()
+       
+        } catch {
+           
+            print(error)
         }
     }
 }

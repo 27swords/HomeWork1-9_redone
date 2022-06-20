@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class PhotoService {
     typealias PhotoResult = Result<[PhotosData], Constants.Service.ServiceError>
@@ -56,6 +57,24 @@ final class PhotoService {
             }.resume()
         } catch {
             completion(.failure(.notConfigureURL))
+        }
+    }
+    
+    ///  Метод сохранения фотографий
+    func saveGroupData(_ photos: [PhotosModel]) {
+        
+        do {
+            
+            let realm = try Realm()
+            
+            realm.beginWrite()
+            realm.add(photos)
+            
+            try realm.commitWrite()
+       
+        } catch {
+           
+            print(error)
         }
     }
 }

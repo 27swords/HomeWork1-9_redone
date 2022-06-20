@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324E39B20FB583A694ABEA55 /* libPods-HomeWork1-9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4051FE00D2AFE0944D6A5AF1 /* libPods-HomeWork1-9.a */; };
 		4937FDB2282D9DD1007BA526 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4937FDB1282D9DD1007BA526 /* Session.swift */; };
 		495AA54027FF74DA00A647AD /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AA53F27FF74DA00A647AD /* MyGroupTableViewCell.swift */; };
 		495AA54227FF74EB00A647AD /* MyGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495AA54127FF74EB00A647AD /* MyGroupTableViewController.swift */; };
@@ -32,12 +33,13 @@
 		49DC5C052832B387000E9A08 /* VKLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DC5C042832B387000E9A08 /* VKLoginViewController.swift */; };
 		49ECA3DC280C4AF6002013CF /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ECA3DB280C4AF6002013CF /* LikeControl.swift */; };
 		49ECA3DE280C571E002013CF /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ECA3DD280C571E002013CF /* AvatarView.swift */; };
-		F16E5CD0C54CA5335509BFF7 /* Pods_HomeWork1_9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B1E736472DC851D9615756 /* Pods_HomeWork1_9.framework */; };
+		4EB369F62860A5160042DA2A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4EB369F52860A5160042DA2A /* Realm */; };
+		4EB369F82860A5160042DA2A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4EB369F72860A5160042DA2A /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04B1E736472DC851D9615756 /* Pods_HomeWork1_9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeWork1_9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DC89B7D9BAC60A73A8D993 /* Pods-HomeWork1-9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeWork1-9.debug.xcconfig"; path = "Target Support Files/Pods-HomeWork1-9/Pods-HomeWork1-9.debug.xcconfig"; sourceTree = "<group>"; };
+		4051FE00D2AFE0944D6A5AF1 /* libPods-HomeWork1-9.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HomeWork1-9.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4937FDB1282D9DD1007BA526 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		495AA53F27FF74DA00A647AD /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewCell.swift; sourceTree = "<group>"; };
 		495AA54127FF74EB00A647AD /* MyGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F16E5CD0C54CA5335509BFF7 /* Pods_HomeWork1_9.framework in Frameworks */,
+				4EB369F82860A5160042DA2A /* RealmSwift in Frameworks */,
+				4EB369F62860A5160042DA2A /* Realm in Frameworks */,
+				324E39B20FB583A694ABEA55 /* libPods-HomeWork1-9.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +87,7 @@
 		1CC8C13B4D9D268078221D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				04B1E736472DC851D9615756 /* Pods_HomeWork1_9.framework */,
+				4051FE00D2AFE0944D6A5AF1 /* libPods-HomeWork1-9.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -311,13 +315,16 @@
 				498A30FE27FB01450041EFEB /* Sources */,
 				498A30FF27FB01450041EFEB /* Frameworks */,
 				498A310027FB01450041EFEB /* Resources */,
-				BBD28D23DC2BA99BEC7D2198 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "HomeWork1-9";
+			packageProductDependencies = (
+				4EB369F52860A5160042DA2A /* Realm */,
+				4EB369F72860A5160042DA2A /* RealmSwift */,
+			);
 			productName = "HomeWork1-9";
 			productReference = 498A310227FB01450041EFEB /* HomeWork1-9.app */;
 			productType = "com.apple.product-type.application";
@@ -346,6 +353,9 @@
 				Base,
 			);
 			mainGroup = 498A30F927FB01450041EFEB;
+			packageReferences = (
+				4EB369F42860A5160042DA2A /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 498A310327FB01450041EFEB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -369,23 +379,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BBD28D23DC2BA99BEC7D2198 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HomeWork1-9/Pods-HomeWork1-9-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HomeWork1-9/Pods-HomeWork1-9-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HomeWork1-9/Pods-HomeWork1-9-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DC61E3E127BA5878E150E1AD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -656,6 +649,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4EB369F42860A5160042DA2A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4EB369F52860A5160042DA2A /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4EB369F42860A5160042DA2A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		4EB369F72860A5160042DA2A /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4EB369F42860A5160042DA2A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		498A310E27FB01450041EFEB /* HomeWork1_9.xcdatamodeld */ = {

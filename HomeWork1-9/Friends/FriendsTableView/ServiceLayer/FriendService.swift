@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class FriendService {
     typealias FriendsResult = Result<[FriendsData], Constants.Service.ServiceError>
@@ -56,4 +57,23 @@ final class FriendService {
             completion(.failure(.notConfigureURL))
         }
     }
+    
+    ///  Метод сохранения друзей
+    func saveGroupData(_ friends: [FriendsModel]) {
+        
+        do {
+            
+            let realm = try Realm()
+            
+            realm.beginWrite()
+            realm.add(friends)
+            
+            try realm.commitWrite()
+       
+        } catch {
+           
+            print(error)
+        }
+    }
+
 }

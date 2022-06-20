@@ -6,21 +6,22 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct GroupsModel: Codable {
-    let response: ResponseGroups
+class GroupsModel: Object ,Codable {
+    var response: ResponseGroups
 }
 
-struct ResponseGroups: Codable {
-    let items: [GroupData]
+class ResponseGroups: Object, Codable {
+    var items: [GroupData]
 }
 
-struct GroupData: Codable {
+class GroupData: Object, Codable {
     
-    let id: Int
-    let name: String
-    let type: TypeEnum
-    let photo100: String
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String = ""
+    var type: TypeEnum
+    @objc dynamic var photo100: String = ""
     
     enum CodingKeys: String, CodingKey {
         case id
